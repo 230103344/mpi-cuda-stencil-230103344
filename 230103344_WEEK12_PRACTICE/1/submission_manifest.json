@@ -1,0 +1,229 @@
+{
+  "GITHUB_USERNAME": "230103344",
+  "gpu_uuid": "GPU-01b4d34c-f229-661a-0e52-da8488bc18ce",
+  "gpu": "Tesla T4, 7.5",
+  "instance_seed": "16638278592430236981",
+  "instance_seed_hex": "0xe6e70a39f7ca6535",
+  "mpi_ranks": 4,
+  "cart_dims": [
+    2,
+    2
+  ],
+  "periods": [
+    false,
+    false
+  ],
+  "topology": [
+    {
+      "rank": 0,
+      "coords": [
+        0,
+        0
+      ],
+      "neighbors": {
+        "up": "PROC_NULL",
+        "down": 2,
+        "left": "PROC_NULL",
+        "right": 1
+      }
+    },
+    {
+      "rank": 1,
+      "coords": [
+        0,
+        1
+      ],
+      "neighbors": {
+        "up": "PROC_NULL",
+        "down": 3,
+        "left": 0,
+        "right": "PROC_NULL"
+      }
+    },
+    {
+      "rank": 2,
+      "coords": [
+        1,
+        0
+      ],
+      "neighbors": {
+        "up": 0,
+        "down": "PROC_NULL",
+        "left": "PROC_NULL",
+        "right": 3
+      }
+    },
+    {
+      "rank": 3,
+      "coords": [
+        1,
+        1
+      ],
+      "neighbors": {
+        "up": 1,
+        "down": "PROC_NULL",
+        "left": 2,
+        "right": "PROC_NULL"
+      }
+    }
+  ],
+  "global_grid": [
+    512,
+    512
+  ],
+  "local_padded_shape": [
+    258,
+    258
+  ],
+  "tile": {
+    "block": [
+      16,
+      16
+    ],
+    "shared_tile": [
+      18,
+      18
+    ]
+  },
+  "steps": 400,
+  "lambda_damp": 0.15,
+  "dx": 0.001949317738791423,
+  "dy": 0.001949317738791423,
+  "kappa_max": 0.2399988697626816,
+  "dt_max": 3.958184939083574e-06,
+  "dt": 3.1665479512668595e-06,
+  "init_params": {
+    "kx": 2.4324211171536305,
+    "ky": 2.272971632202685,
+    "n_pulses": 3,
+    "pulse_centers": [
+      [
+        0.8099556909575165,
+        0.19846816785583432
+      ],
+      [
+        0.40585816719521894,
+        0.6502639910604215
+      ],
+      [
+        0.43104867027574256,
+        0.15662157480358596
+      ]
+    ],
+    "pulse_amps": [
+      1.5162027920217707,
+      1.5739131616897666,
+      1.2660655079100256
+    ],
+    "pulse_sigmas": [
+      0.07892361620333904,
+      0.072085347963562,
+      0.07398253793450878
+    ],
+    "src_center": [
+      0.4400521138380429,
+      0.6107028071637486
+    ],
+    "src_amp": 0.35361175400487066,
+    "kappa_max": 0.2399988697626816,
+    "dt_max": 3.958184939083574e-06,
+    "dt": 3.1665479512668595e-06
+  },
+  "energy_trace_serialized": [
+    {
+      "step": 0,
+      "energy": 0.15264262658790737,
+      "l2_residual": 0.0,
+      "max_abs_u": 1.5737900199209147
+    },
+    {
+      "step": 100,
+      "energy": 0.15218273994887793,
+      "l2_residual": 0.024540591525865553,
+      "max_abs_u": 1.5399124973290625
+    },
+    {
+      "step": 200,
+      "energy": 0.15190568244818844,
+      "l2_residual": 0.022888838628807258,
+      "max_abs_u": 1.5079087149753707
+    },
+    {
+      "step": 300,
+      "energy": 0.15166068489163573,
+      "l2_residual": 0.021910247552157838,
+      "max_abs_u": 1.477431098896515
+    },
+    {
+      "step": 400,
+      "energy": 0.1514299664483389,
+      "l2_residual": 0.021104725466363522,
+      "max_abs_u": 1.4485022865945898
+    }
+  ],
+  "energy_trace_overlapped": [
+    {
+      "step": 0,
+      "energy": 0.15264262658790737,
+      "l2_residual": 0.0,
+      "max_abs_u": 1.5737900199209147
+    },
+    {
+      "step": 100,
+      "energy": 0.15218273994887793,
+      "l2_residual": 0.024540591525865553,
+      "max_abs_u": 1.5399124973290625
+    },
+    {
+      "step": 200,
+      "energy": 0.15190568244818844,
+      "l2_residual": 0.022888838628807258,
+      "max_abs_u": 1.5079087149753707
+    },
+    {
+      "step": 300,
+      "energy": 0.15166068489163573,
+      "l2_residual": 0.021910247552157838,
+      "max_abs_u": 1.477431098896515
+    },
+    {
+      "step": 400,
+      "energy": 0.1514299664483389,
+      "l2_residual": 0.021104725466363522,
+      "max_abs_u": 1.4485022865945898
+    }
+  ],
+  "serialized_ms": 973.6255980000001,
+  "overlapped_ms": 1390.76123,
+  "serialized_cuda_event_ms": 961.48095703125,
+  "overlapped_cuda_event_ms": 1374.8845520019531,
+  "overlap_speedup": 0.700066680748643,
+  "parity_max_diff": 0.0,
+  "parity_passed": true,
+  "ptx": {
+    "st_shared_f64": 5,
+    "ld_shared_f64": 5,
+    "bar_sync": 1,
+    "st_shared_total": 5,
+    "ld_shared_total": 5,
+    "ptx_source": "inspect_asm",
+    "ptx_audit_passed": true
+  },
+  "ptx_audit_passed": true,
+  "forbidden_collectives_on_fields": false,
+  "versions": {
+    "python": "3.13.16",
+    "numpy": "2.4.6",
+    "numba": "0.64.0",
+    "mpi": "Open MPI v4.1.6, package: Debian OpenMPI, ident: 4.1.6, repo rev: v4.1.6, Sep 30, 2023\u0000"
+  },
+  "timestamp_utc": "2026-11-20T12:02:23Z",
+  "execution_mode": "gpu",
+  "tasks_completed": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ]
+}
